@@ -19,6 +19,7 @@ namespace Consumer.ConsoleApp
 
             connection = GetConnection();
 
+
             channel.QueueDeclare(queueName, exclusive: false);
             channel.QueueBind(queueName, "exchange_dir", queueName);
 
